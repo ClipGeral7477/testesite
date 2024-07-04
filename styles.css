@@ -371,14 +371,14 @@ main {
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
     .logo {
-        width: 200px;
-        height: 200px;
+        width: 90px;
+        height: 90px;
     }
 }
 
 @media (max-width: 480px) {
     .logo {
-        width: 200px;
-        height: 200px;
+        width: 70px;
+        height: 70px;
     }
 }
