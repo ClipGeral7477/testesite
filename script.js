@@ -5,7 +5,15 @@ document.addEventListener('DOMContentLoaded', function() {
     expandButtons.forEach(button => {
         button.addEventListener('click', function() {
             const offer = this.closest('.offer');
-            offer.classList.toggle('expanded');
+            const detailsExtra = offer.querySelector('.details-extra');
+
+            if (offer.classList.contains('expanded')) {
+                detailsExtra.style.maxHeight = '0';
+                offer.classList.remove('expanded');
+            } else {
+                detailsExtra.style.maxHeight = detailsExtra.scrollHeight + 'px';
+                offer.classList.add('expanded');
+            }
         });
     });
 });

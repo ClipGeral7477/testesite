@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Montserrat, sans-serif;
     background-color: #16213e;
     color: #fff;
     line-height: 1.6;
@@ -36,13 +36,20 @@ header .profile h1, header .profile h2 {
 
 header .social-icons {
     display: flex;
-    gap: 10px;
+    gap: 18px;
     margin: 10px 0;
 }
 
 header .social-icons img {
-    width: 24px;
-    height: 24px;
+    width: 36px;
+    height: 36px;
+}
+
+.icon {
+    width: 20px; /* Defina o tamanho desejado para o ícone */
+    height: auto; /* Mantém a proporção da imagem */
+    vertical-align: middle; /* Alinha verticalmente com o texto */
+    margin-left: 5px; /* Adiciona um pequeno espaço à esquerda da imagem */
 }
 
 header .promo {
@@ -69,14 +76,18 @@ main {
 }
 
 .offer {
-    display: flex;
+
     flex-direction: column;
     align-items: center;
     background-color: #0f3460;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 15px;
     border: 2px solid transparent;
-    width: 200px;
+    width: 20%;
+    margin: 5px; /* Centraliza a coluna na página */
+    margin-bottom: 5px; /* Espaço entre ofertas */
+    position: relative; /* Necessário para posicionar o conteúdo */
+    overflow: hidden;
     text-align: center;
 }
 
@@ -84,9 +95,44 @@ main {
     border: 2px solid #e94560;
 }
 
+.offer-name {
+    color: #fff; /* Cor para o nome da oferta */
+    text-decoration: none; /* Remove sublinhado padrão */
+    transition: color 0.3s ease; /* Transição suave da cor */
+}
+
+.offer-name:hover {
+    color: #0056b3; /* Altera a cor ao passar o mouse sobre o nome da oferta */
+}
+
+.offer-link,
+.visit-link {
+    color: #a3a3a3; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado padrão */
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    font-size: 16px;
+    color: white;
+    background-color: #de4343;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px; /* Curva botão "Quero Bónus" */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
 .logo img {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 10px;
 }
 
@@ -113,7 +159,7 @@ main {
 .box {
     background-color: #1a1a2e;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .actions {
@@ -128,13 +174,15 @@ main {
     border: none;
     padding: 10px;
     margin: 5px 0;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
+    transition: transform 0.2s ease; /* Transição suave para a transformação */
 }
 
 .actions button:hover {
     background-color: #ff6f91;
+    transform: scale(1.1); /* Aumenta o tamanho em 10% ao passar o mouse */
 }
 
 .actions p {
@@ -149,16 +197,36 @@ main {
 }
 
 .avatar:hover {
-    border-color: #f00; /* Mudança de cor do contorno ao passar o mouse */
+    border-color: #ff6f91; /* Mudança de cor do contorno ao passar o mouse */
 }
 
 .offer .details-extra {
-    display: none; /* Inicialmente oculta as informações adicionais */
-    padding: 10px;
+    max-height: 0; /* Inicialmente oculta as informações adicionais */
+    padding: 0 10px; /* Apenas padding lateral */
     background-color: #1a1a2e;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 0px solid #ccc;
+    border-radius: 5px; /* Para criar um formato circular */
+    border-top: none; /* Remove a borda superior para evitar duplicação */
+    overflow: hidden;
+    transition: max-height 0.5s ease; /* Adiciona a transição de deslizamento */
 }
+
+.details-extra p {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px; /* Espaçamento entre os parágrafos */
+}
+
+.details-extra p:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: calc(100% - 20px); /* Largura do traço menos o espaço dos lados */
+    border-bottom: 1px solid #ccc; /* Estilo do traço */
+    position: absolute;
+    bottom: -10px; /* Posição do traço em relação ao texto */
+    left: 10px; /* Espaço à esquerda do traço */
+}
+
 
 .offer.expanded .details-extra {
     display: block; /* Mostra as informações adicionais quando a classe .expanded é adicionada */
