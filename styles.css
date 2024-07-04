@@ -138,8 +138,8 @@ main {
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
 
 .logo a {
@@ -371,14 +371,14 @@ main {
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
     .logo {
-        width: 90px;
-        height: 90px;
+        width: 200px;
+        height: 200px;
     }
 }
 
 @media (max-width: 480px) {
     .logo {
-        width: 70px;
-        height: 70px;
+        width: 200px;
+        height: 200px;
     }
 }
