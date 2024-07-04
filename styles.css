@@ -1,245 +1,216 @@
-* {
+/* styles.css */
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Montserrat, sans-serif;
-    background-color: #16213e;
-    color: #fff;
-    line-height: 1.6;
 }
 
 header {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1f1f1;
     padding: 20px;
     text-align: center;
 }
 
-header .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header .profile img {
+.profile img.avatar {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    width: 250px;
-    height: 250px;
-    margin-bottom: 10px;
+    border: 2px solid #333;
+    transition: transform 0.3s ease;
 }
 
-header .profile h1, header .profile h2 {
-    margin: 5px 0;
+.profile img.avatar:hover {
+    transform: scale(1.1);
 }
 
-header .social-icons {
+.social-icons {
     display: flex;
-    gap: 18px;
-    margin: 10px 0;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-header .social-icons img {
-    width: 36px;
-    height: 36px;
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
 }
 
-.icon {
-    width: 20px; /* Defina o tamanho desejado para o ícone */
-    height: auto; /* Mantém a proporção da imagem */
-    vertical-align: middle; /* Alinha verticalmente com o texto */
-    margin-left: 5px; /* Adiciona um pequeno espaço à esquerda da imagem */
+.social-icons a img:hover {
+    transform: scale(1.2);
 }
 
-header .promo {
+.promo {
     margin-top: 20px;
 }
 
-header .promo img {
+.promo img {
     width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
+    max-width: 600px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-header .promo p {
-    margin-top: 10px;
-    font-size: 0.9em;
+.promo img:hover {
+    transform: scale(1.05);
 }
 
 main {
-    padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
 }
 
 .offer {
-
+    display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0f3460;
+    margin: 20px;
     padding: 20px;
-    border-radius: 15px;
-    border: 2px solid transparent;
-    width: 20%;
-    margin: 5px; /* Centraliza a coluna na página */
-    margin-bottom: 5px; /* Espaço entre ofertas */
-    position: relative; /* Necessário para posicionar o conteúdo */
-    overflow: hidden;
-    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 300px;
+    transition: transform 0.3s ease;
 }
 
 .offer:hover {
-    border: 2px solid #e94560;
+    transform: scale(1.05);
 }
 
-.offer-name {
-    color: #fff; /* Cor para o nome da oferta */
-    text-decoration: none; /* Remove sublinhado padrão */
-    transition: color 0.3s ease; /* Transição suave da cor */
+.offer .logo img {
+    width: 100px;
+    height: auto;
 }
 
-.offer-name:hover {
-    color: #0056b3; /* Altera a cor ao passar o mouse sobre o nome da oferta */
+.details {
+    text-align: center;
 }
 
-.offer-link,
-.visit-link {
-    color: #a3a3a3; /* Cor do link */
-    text-decoration: none; /* Remove sublinhado padrão */
+.details a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.details a:hover {
+    color: #0056b3;
+    transform: scale(1.05);
+}
 
-.button {
+.details-extra {
+    display: none;
+    margin-top: 10px;
+}
+
+.details-extra img {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.actions a.button {
     display: inline-block;
     padding: 10px 20px;
     margin: 5px 0;
     font-size: 16px;
     color: white;
-    background-color: #de4343;
+    background-color: #007bff;
     text-align: center;
     text-decoration: none;
-    border-radius: 25px; /* Curva botão "Quero Bónus" */
+    border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.button:hover {
+.actions a.button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
 }
 
-.logo img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-}
-
-.details {
-    margin-bottom: 10px;
-}
-
-.details h2 {
-    color: #ffba08;
-    margin-bottom: 5px;
-}
-
-.details p {
-    margin: 5px 0;
-}
-
-.info {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.box {
-    background-color: #1a1a2e;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-.actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.actions button {
-    background-color: #e94560;
-    color: #fff;
+hr.separator {
     border: none;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 25px;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.show-more {
     cursor: pointer;
-    width: 50%;
-    transition: transform 0.2s ease; /* Transição suave para a transformação */
+    color: #007bff;
+    transition: color 0.3s ease;
 }
 
-.actions button:hover {
-    background-color: #ff6f91;
-    transform: scale(1.1); /* Aumenta o tamanho em 10% ao passar o mouse */
+.show-more:hover {
+    color: #0056b3;
 }
 
-.actions p {
-    font-size: 0.8em;
-    margin-top: 10px;
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .offer {
+        flex-direction: column;
+        margin: 10px;
+        padding: 15px;
+        width: 100%; /* Ajuste a largura conforme necessário */
+    }
+
+    .offer .logo img {
+        max-width: 80px;
+    }
+
+    .details h2 {
+        font-size: 1.5em;
+    }
+
+    .actions a.button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .box {
+        padding: 10px;
+    }
 }
 
-.avatar {
-    border: 3px solid #fff; /* Adiciona um contorno branco de 3 pixels */
-    border-radius: 50%; /* Para criar um formato circular */
-    transition: border-color 0.3s ease; /* Transição suave para a cor do contorno */
-}
+@media (max-width: 480px) {
+    .offer {
+        margin: 5px;
+        padding: 10px;
+        width: 100%; /* Ajuste a largura conforme necessário */
+    }
 
-.avatar:hover {
-    border-color: #ff6f91; /* Mudança de cor do contorno ao passar o mouse */
-}
+    .offer .logo img {
+        max-width: 60px;
+    }
 
-.offer .details-extra {
-    max-height: 0; /* Inicialmente oculta as informações adicionais */
-    padding: 0 10px; /* Apenas padding lateral */
-    background-color: #1a1a2e;
-    border: 0px solid #ccc;
-    border-radius: 5px; /* Para criar um formato circular */
-    border-top: none; /* Remove a borda superior para evitar duplicação */
-    overflow: hidden;
-    transition: max-height 0.5s ease; /* Adiciona a transição de deslizamento */
-}
+    .details h2 {
+        font-size: 1.2em;
+    }
 
-.details-extra p {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 20px; /* Espaçamento entre os parágrafos */
-}
+    .actions a.button {
+        padding: 8px;
+        font-size: 12px;
+    }
 
-.details-extra p:not(:last-child)::after {
-    content: "";
-    display: block;
-    width: calc(100% - 20px); /* Largura do traço menos o espaço dos lados */
-    border-bottom: 1px solid #ccc; /* Estilo do traço */
-    position: absolute;
-    bottom: -10px; /* Posição do traço em relação ao texto */
-    left: 10px; /* Espaço à esquerda do traço */
-}
+    .info {
+        grid-template-columns: 1fr;
+    }
 
-
-.offer.expanded .details-extra {
-    display: block; /* Mostra as informações adicionais quando a classe .expanded é adicionada */
-}
-
-.offer .expand-btn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.offer .expand-btn:hover {
-    background-color: #0056b3; /* Cor do botão quando passar o mouse */
+    .box {
+        padding: 5px;
+    }
 }
