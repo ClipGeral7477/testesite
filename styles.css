@@ -317,3 +317,28 @@ main {
     }
 }
 
+@media (max-width: 768px) {
+    header .profile img {
+        width: 180px;
+        height: 180px;
+    }
+
+    header .social-icons img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .profile img {
+        width: 140px;
+        height: 140px;
+    }
+
+    header .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
