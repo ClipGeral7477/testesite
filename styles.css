@@ -81,13 +81,14 @@ main {
     background-color: #0f3460;
     padding: 20px;
     border-radius: 15px;
-    border: 2px solid transparent;
+    border: 2px solid #fff;
     width: 20%;
     margin: 5px; /* Centraliza a coluna na página */
     margin-bottom: 5px; /* Espaço entre ofertas */
     position: relative; /* Necessário para posicionar o conteúdo */
     overflow: hidden;
     text-align: center;
+    transition: border-color 0.3s ease; /* Adiciona uma transição suave para a borda */
 }
 
 .offer:hover {
@@ -129,11 +130,37 @@ main {
     transform: scale(1.05);
 }
 
-.logo img {
-    width: 100px;
-    height: 100px;
+.logo-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
     margin-bottom: 10px;
 }
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.logo a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px; /* Arredondamento dos cantos do link */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites arredondados */
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Mantém a proporção da imagem dentro do contêiner */
+}
+
+.logo a:hover {
+    transform: scale(1.1); /* Aumenta o tamanho em 10% ao passar o mouse */
+}
+
 
 .details {
     margin-bottom: 10px;
@@ -341,20 +368,4 @@ main {
     }
 }
 
-/* Ajustes adicionais para traços em dispositivos móveis */
-@media (max-width: 768px) {
-    .details-extra p:not(:last-child)::after {
-        width: calc(100% - 20px);
-        left: 10px;
-        bottom: -10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .details-extra p:not(:last-child)::after {
-        width: calc(100% - 10px);
-        left: 5px;
-        bottom: -8px;
-    }
-}
 
