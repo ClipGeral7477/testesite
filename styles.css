@@ -341,4 +341,20 @@ main {
     }
 }
 
+/* Ajustes adicionais para traços em dispositivos móveis */
+@media (max-width: 768px) {
+    .details-extra p:not(:last-child)::after {
+        width: calc(100% - 20px);
+        left: 10px;
+        bottom: -10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .details-extra p:not(:last-child)::after {
+        width: calc(100% - 10px);
+        left: 5px;
+        bottom: -8px;
+    }
+}
 
