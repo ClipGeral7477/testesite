@@ -89,10 +89,13 @@ main {
     overflow: hidden;
     text-align: center;
     transition: border-color 0.3s ease; /* Adiciona uma transição suave para a borda */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Adiciona brilho às colunas */
 }
 
 .offer:hover {
     border: 2px solid #e94560;
+    
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Brilho mais pronunciado ao passar o mouse */
 }
 
 .offer-name {
