@@ -11,6 +11,20 @@ body {
     line-height: 1.6;
 }
 
+.custom-font {
+    font-family: Montserrat Alternates, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+    /* Outros estilos conforme necessário */
+}
+
+.custom-font1 {
+    font-family: Montserrat Alternates, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+    /* Outros estilos conforme necessário */
+}
+
 header {
 
     padding: 20px;
