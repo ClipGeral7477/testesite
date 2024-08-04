@@ -286,6 +286,26 @@ main {
     background-color: #0056b3; /* Cor do botão quando passar o mouse */
 }
 
+.small-promo {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.small-promo-image {
+    width: 150px; /* Ajuste a largura conforme necessário */
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.small-promo-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
     header .profile img {
